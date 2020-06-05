@@ -7,6 +7,9 @@
 * Tratamento de erros e códigos HTTP.
 * Autenticação com tokens JWT.
 
+#PS.
+* Use JWT_KEY=your key to autenticate
+
 # Lumen PHP Framework
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
 [![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
