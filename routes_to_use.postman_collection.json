@@ -1,0 +1,497 @@
+{
+	"info": {
+		"_postman_id": "425eb3d5-010d-4a78-9dfe-b0320b0d541b",
+		"name": "Lumen Estudos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Series",
+			"item": [
+				{
+					"name": "Lista series",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/series",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"series"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Serie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"The O.C.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/series",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"series"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Serie",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"alices\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/series/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"series",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Serie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/series/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"series",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Epsodios",
+			"item": [
+				{
+					"name": "Lista Episodios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/episodios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"episodios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar epsodio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"temporada\": \"1\",\n\t\"numero\": \"1\",\n\t\"assistido\":\"0\",\n\t\"serie_id\" : \"3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/episodios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"episodios"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Login api eduzz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"thiagomarcato@gmail.com\",\n\t\"password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deposit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InRoaWFnb21hcmNhdG9AZ21haWwuY29tIn0.PMf2NWQpC0kRCQiXGT_xDLTzezQLrd8M2PhOmobAHKs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\": 10000\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/account/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"account",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Acount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"name\": \"Fulano da Silva\",\n   \"email\":\"thiagomarcato@gmail.com\",\n   \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/account/balance",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InRoaWFnb21hcmNhdG9AZ21haWwuY29tIn0.PMf2NWQpC0kRCQiXGT_xDLTzezQLrd8M2PhOmobAHKs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/account/balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"account",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/btc/price",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InRoaWFnb21hcmNhdG9AZ21haWwuY29tIn0.PMf2NWQpC0kRCQiXGT_xDLTzezQLrd8M2PhOmobAHKs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/btc/price",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"btc",
+						"price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/btc/purchase",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InRoaWFnb21hcmNhdG9AZ21haWwuY29tIn0.PMf2NWQpC0kRCQiXGT_xDLTzezQLrd8M2PhOmobAHKs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\": 50\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/btc/purchase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"btc",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/btc/sell",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InRoaWFnb21hcmNhdG9AZ21haWwuY29tIn0.PMf2NWQpC0kRCQiXGT_xDLTzezQLrd8M2PhOmobAHKs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\":0.009\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/btc/sell",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"btc",
+						"sell"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " /extract",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InRoaWFnb21hcmNhdG9AZ21haWwuY29tIn0.PMf2NWQpC0kRCQiXGT_xDLTzezQLrd8M2PhOmobAHKs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/extract",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"extract"
+					],
+					"query": [
+						{
+							"key": "start_at",
+							"value": "2020-01-01",
+							"disabled": true
+						},
+						{
+							"key": "end_at",
+							"value": "2020-03-02",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/volume",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InRoaWFnb21hcmNhdG9AZ21haWwuY29tIn0.PMf2NWQpC0kRCQiXGT_xDLTzezQLrd8M2PhOmobAHKs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/volume",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"volume"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/history",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InRoaWFnb21hcmNhdG9AZ21haWwuY29tIn0.PMf2NWQpC0kRCQiXGT_xDLTzezQLrd8M2PhOmobAHKs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/position",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InRoaWFnb21hcmNhdG9AZ21haWwuY29tIn0.PMf2NWQpC0kRCQiXGT_xDLTzezQLrd8M2PhOmobAHKs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/account/position",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"account",
+						"position"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
